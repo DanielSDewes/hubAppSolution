@@ -34,21 +34,31 @@ img {
     font-weight: 500;
     padding: 5px;
     font-size: 1em;
+    border-radius: 10px;
+}
+
+.main-relaction-app {
+    width: 50%;
+    float: left;
 }
 
 .relaction-app {
-    margin: 30px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(17.5px);
     -webkit-backdrop-filter: blur(17.5px);
-    display: block;
     float: left;
     color: #fff;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.relaction-app-margin{
+    margin: 30px;
 }
 
 .row-app {
