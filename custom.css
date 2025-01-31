@@ -19,7 +19,7 @@ body {
 }
 
 img {
-    width: 1728x;
+    width: 400px;
     max-width: 100%;
     filter: drop-shadow(5px 5px 5px rgba(31, 38, 135, 0.37));
 }
