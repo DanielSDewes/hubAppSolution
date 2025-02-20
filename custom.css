@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: 2em;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .logo {
@@ -18,10 +18,12 @@ body {
     justify-content: center;
 }
 
-img {
-    width: 600px;
-    max-width: 100%;
-    filter: drop-shadow(5px 5px 5px rgba(31, 38, 135, 0.37));
+@keyframes borderGradient {
+    0% { border-image-source: linear-gradient(45deg, rgb(255, 0, 0), rgb(0, 255, 0)); }
+    25% { border-image-source: linear-gradient(45deg, rgb(0, 255, 0), rgb(0, 0, 255)); }
+    50% { border-image-source: linear-gradient(45deg, rgb(0, 0, 255), rgb(255, 255, 0)); }
+    75% { border-image-source: linear-gradient(45deg, rgb(255, 255, 0), rgb(255, 0, 0)); }
+    100% { border-image-source: linear-gradient(45deg, rgb(255, 0, 0), rgb(0, 255, 0)); }
 }
 
 .app {
@@ -32,10 +34,16 @@ img {
     backdrop-filter: blur(17.5px);
     -webkit-backdrop-filter: blur(17.5px);
     border-radius: 15px;
-    width: 40%; /* Limita a largura */
+    width: 40%;
     padding: 1em;
     margin: 0 4em;
+    
+    /* Borda Gradiente Animada e Arredondada */
+    border: 5px solid transparent;
+    border-image-slice: 1;
+    animation: borderGradient 4s infinite linear;
 }
+
 
 .título {
     font-size: 36px;
@@ -63,5 +71,5 @@ img {
 .link:hover {
     background: rgba(69, 149, 210, 0.5);
     transform: translateY(-2px);
-    color: white;
+    color: rgb(46, 61, 159);
 }
